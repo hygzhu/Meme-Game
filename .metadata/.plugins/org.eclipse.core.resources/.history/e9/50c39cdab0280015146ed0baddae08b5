@@ -4,6 +4,10 @@ import java.awt.Graphics;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
 
+//BUG LIST
+//FIRST SPAWN IS A BASIC ENEMY AND NOT YELLOW
+//PLEASE FIX
+
 public class Game extends Canvas implements Runnable{
 	
 	public static final int WIDTH = 1280, HEIGHT = WIDTH/12*9;//16:9 ratio
@@ -39,6 +43,16 @@ public class Game extends Canvas implements Runnable{
 			Audio.initialize();
 			Audio.run("MemeCircus");//Plays Audio
 		}
+	
+		
+		if(gameState == STATE.Game){
+			
+			
+			handler.addObject(new Player(WIDTH/2-32,HEIGHT/2-32,ID.Player, handler));//adds player object
+			handler.addObject(new YellowEnemy(r.nextInt(WIDTH), r.nextInt(HEIGHT), ID.YellowEnemy));
+			
+		}
+		
 		
 	}//constructor
 	
