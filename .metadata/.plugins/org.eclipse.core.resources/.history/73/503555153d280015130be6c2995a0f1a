@@ -1,0 +1,27 @@
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class GUI extends JPanel{
+
+	private Game game;
+	
+	public GUI(Game game){
+	
+	this.game = game;	
+	
+	this.setBounds(0, 0, Game.WIDTH, Game.HEIGHT);
+
+	JLabel snoop = new JLabel(new ImageIcon("Images//snoop.gif"));
+	snoop.setBounds(0, 0, 150, 308);
+	snoop.setOpaque(false);
+	add(snoop);	
+		
+	}
+	
+	public void render(graphics g){
+		
+	}
+	
+}
