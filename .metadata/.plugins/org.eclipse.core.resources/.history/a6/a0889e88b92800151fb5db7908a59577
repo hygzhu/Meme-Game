@@ -1,0 +1,47 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.MouseInfo;
+import java.awt.Rectangle;
+
+
+
+public class Projectile extends GameObject{
+
+	float mouseX;
+	float mouseY;
+
+	public Projectile(float x, float y, ID id) {
+		super(x, y, id);
+
+	}
+
+	public Rectangle getBounds(){
+		return new Rectangle((int)x,(int)y,5,5);
+	}//Collision Boundary
+
+	public void tick() {
+		
+		mouseX = MouseInfo.getPointerInfo().getLocation().x;
+		mouseY = MouseInfo.getPointerInfo().getLocation().y;
+
+		if(mouseX > x){
+			velX = 5;
+		}else if(mouseX < x){
+			velX = -5;
+		}
+		
+		
+		x+= velX;
+		y+= velY;
+		
+	}
+
+
+	public void render(Graphics g) {
+		g.setColor(Color.red);
+		g.fillRect((int)x,(int) y,  5, 5);
+		
+		
+	}
+
+}

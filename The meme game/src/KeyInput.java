@@ -30,6 +30,8 @@ public class KeyInput extends KeyAdapter {
 				if(key == KeyEvent.VK_A) {tempObject.setVelX(-3); keyDown[2]=true;}
 				if(key == KeyEvent.VK_D) {tempObject.setVelX(+3); keyDown[3]=true;}
 				
+				if(key == KeyEvent.VK_SPACE) handler.addObject(new Projectile(tempObject.x+15, tempObject.y+15, ID.Projectile, handler, (Player) tempObject));//spawns projectile
+				
 			}
 			
 		}//loops through all objects 

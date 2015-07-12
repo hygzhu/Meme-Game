@@ -41,7 +41,7 @@ public class Player extends GameObject {
 				}
 				
 				//collision code for basic enemy
-			}else if (tempObject.getID() == ID.SmartEnemy){ 
+			}else if (tempObject.getID() == ID.SmartEnemy||tempObject.getID() == ID.DogeEnemy){ 
 				if(getBounds().intersects(tempObject.getBounds())){
 					HUD.HEALTH-=2;
 				}

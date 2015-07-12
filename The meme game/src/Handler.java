@@ -10,7 +10,14 @@ public class Handler {
 		for(int i = 0; i<object.size(); i++){
 			GameObject tempObject = object.get(i);
 			tempObject.tick();
+			
+			if(tempObject.getID()== ID.Removed){
+				removeObject(tempObject);
+			}//removed objects needed to be removed
 		}
+		
+	
+		
 		
 	}
 	public void render(Graphics g){

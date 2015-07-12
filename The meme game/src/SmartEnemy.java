@@ -45,7 +45,7 @@ public class SmartEnemy extends GameObject{
 
 	public void render(Graphics g) {
 		g.setColor(Color.green);
-		g.fillRect((int)x,(int) y,  16, 16);
+		g.drawRect((int)x,(int) y,  16, 16);
 		
 	}
 

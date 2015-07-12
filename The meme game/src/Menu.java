@@ -31,7 +31,7 @@ public class Menu extends MouseAdapter{
 			if(mouseOver(mx, my, 510, 250, 200, 64)){
 			game.gameState = game.gameState.Game;
 			handler.addObject(new Player(game.WIDTH/2-32,game.HEIGHT/2-32,ID.Player, handler));//adds player object
-			handler.addObject(new YellowEnemy(r.nextInt(game.WIDTH), r.nextInt(game.HEIGHT), ID.YellowEnemy));//adds basic enemy
+			handler.addObject(new YellowEnemy(r.nextInt(game.WIDTH), r.nextInt(game.HEIGHT), ID.YellowEnemy,handler, hud));//adds basic enemy
 			}
 		}
 		//help button for main menu
@@ -63,7 +63,9 @@ public class Menu extends MouseAdapter{
 		
 		//back button for end screen
 		if(game.gameState == game.gameState.End){
-			if(mouseOver(mx, my, 210, 350, 200, 64)){
+			if(mouseOver(mx, my,510, 350, 200, 64)){
+			hud.setScore(0);
+			hud.setLevel(1);	
 			game.gameState = game.gameState.Menu;
 			}
 		}
@@ -114,19 +116,20 @@ public class Menu extends MouseAdapter{
 			g.setColor(Color.white);
 			g.drawRect(510, 250, 200, 64);
 			g.drawString("Back",570, 290);
+			
 		}else if(game.gameState == game.gameState.End){
 			Font fnt = new Font("Comic Sans MS",1,50);
 			g.setFont(fnt);
 			g.setColor(Color.WHITE);
-			g.drawString("Rip in peppa pig",130,70);
+			g.drawString("Rip in peppa pig",430,70);
 			Font fnt2 = new Font("Comic Sans MS",1,20);
 			g.setFont(fnt2);
 			g.setColor(Color.white);
-			g.drawRect(210, 350, 200, 64);
-			g.drawString("back to da choppa",220, 390);
+			g.drawRect(510, 350, 200, 64);
+			g.drawString("back to da choppa",520, 390);
 			Font fnt3 = new Font("Comic Sans MS",1,30);
 			g.setFont(fnt3);
-			g.drawString("U got "+hud.getScore()+ " k3ks", 200, 200);
+			g.drawString("U got "+hud.getScore()+ " k3ks", 500, 200);
 		}
 		
 		

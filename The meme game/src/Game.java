@@ -12,8 +12,8 @@ public class Game extends Canvas implements Runnable{
 	private Handler handler;
 	private HUD hud;
 	private Spawn spawn;
-	private Random r;
 	private Menu menu;
+
 	
 	public enum STATE {
 		Menu, Game, Help, End
@@ -28,16 +28,16 @@ public class Game extends Canvas implements Runnable{
 		menu = new Menu(this, handler, hud);
 		this.addKeyListener(new KeyInput(handler));
 		this.addMouseListener(menu);
-		
 		new Window(WIDTH, HEIGHT, "Computational Memes for Bored Teens", this);
+
 		
 		
 		spawn = new Spawn(handler, hud);
-		r = new Random();
 	
 		if(gameState == STATE.Menu){
 			Audio.initialize();
 			Audio.run("MemeCircus");//Plays Audio
+			LoadImage.initialize();
 		}
 		
 	}//constructor

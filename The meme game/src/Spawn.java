@@ -20,10 +20,12 @@ public class Spawn {
 			scoreKeep =0;
 			hud.setLevel(hud.getLevel()+1);
 			
-			handler.addObject(new YellowEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.YellowEnemy));
-			
-			if(hud.getLevel()==5){
-			handler.addObject(new SmartEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.SmartEnemy, handler));
+			if(hud.getLevel()%2 == 0){
+			handler.addObject(new DogeEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.DogeEnemy, handler, hud));//Spawns every second level
+			handler.addObject(new YellowEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.YellowEnemy, handler, hud));
+			handler.addObject(new YellowEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.YellowEnemy, handler, hud));
+			}else{
+			handler.addObject(new YellowEnemy(r.nextInt(Game.WIDTH), r.nextInt(Game.HEIGHT), ID.YellowEnemy, handler, hud));//spawns when no other spawning 
 			}
 		
 			
