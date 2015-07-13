@@ -64,6 +64,7 @@ public class Menu extends MouseAdapter{
 		//back button for end screen
 		if(game.gameState == game.gameState.End){
 			if(mouseOver(mx, my,510, 350, 200, 64)){
+			Audio.run("MemeCircus");	
 			hud.setScore(0);
 			hud.setLevel(1);	
 			game.gameState = game.gameState.Menu;
@@ -86,6 +87,7 @@ public class Menu extends MouseAdapter{
 	public void render(Graphics g){
 		
 		if(game.gameState == game.gameState.Menu){
+			
 			Font fnt = new Font("Comic Sans MS",1,50);
 			Font fnt2 = new Font("Comic Sans MS",1,20);
 			g.setFont(fnt);
@@ -118,6 +120,9 @@ public class Menu extends MouseAdapter{
 			g.drawString("Back",570, 290);
 			
 		}else if(game.gameState == game.gameState.End){
+			
+			Audio.run("Sad");
+			
 			Font fnt = new Font("Comic Sans MS",1,50);
 			g.setFont(fnt);
 			g.setColor(Color.WHITE);

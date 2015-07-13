@@ -37,12 +37,14 @@ public class Player extends GameObject {
 			
 			if(tempObject.getID() == ID.BasicEnemy||tempObject.getID() == ID.YellowEnemy){ //tempObject is now basic enemy
 				if(getBounds().intersects(tempObject.getBounds())){
+					Audio.run("Whatchasay");
 					HUD.HEALTH-=2;
 				}
 				
 				//collision code for basic enemy
 			}else if (tempObject.getID() == ID.SmartEnemy||tempObject.getID() == ID.DogeEnemy){ 
 				if(getBounds().intersects(tempObject.getBounds())){
+					Audio.run("Whatchasay");
 					HUD.HEALTH-=2;
 				}
 				

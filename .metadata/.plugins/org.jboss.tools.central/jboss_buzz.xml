@@ -5,7 +5,7 @@
       <description>Pipes Output</description>
       <link>http://pipes.yahoo.com/pipes/pipe.info?_id=790c1cc25610e6b571d4857eaeb44fa4</link>
       <atom:link rel="next" href="http://pipes.yahoo.com/pipes/pipe.run?_id=790c1cc25610e6b571d4857eaeb44fa4&amp;_render=rss" />
-      <pubDate>Fri, 10 Jul 2015 22:47:03 +0000</pubDate>
+      <pubDate>Mon, 13 Jul 2015 01:14:11 +0000</pubDate>
       <generator>http://pipes.yahoo.com/pipes/</generator>
       <atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/jbossbuzz" /><feedburner:info uri="jbossbuzz" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><item>
          <title>Second Candidate Release for 5.0</title>
@@ -8731,4 +8731,4 @@
          <pubDate>Mon, 03 Nov 2014 00:00:00 +0000</pubDate>
       <feedburner:origLink>http://in.relation.to/2014/11/03/hibernate-search-releases-500-beta-1-the-final-sprint-begins/</feedburner:origLink></item>
    </channel>
-</rss><!-- fe1.yql.bf1.yahoo.com compressed/chunked Fri Jul 10 22:47:03 UTC 2015 -->
+</rss><!-- fe6.yql.bf1.yahoo.com compressed/chunked Mon Jul 13 01:14:06 UTC 2015 -->
