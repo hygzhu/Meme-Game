@@ -5,7 +5,6 @@ import java.awt.image.BufferStrategy;
 import java.util.Random;
 
 //Created by Haoyang Zhu
-//Summer stuff
 
 public class Game extends Canvas implements Runnable{
 	
